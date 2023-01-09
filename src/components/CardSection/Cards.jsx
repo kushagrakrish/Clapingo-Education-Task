@@ -25,12 +25,12 @@ const Items = [
 ];
 const Cards = () => {
   return (
-    <div className='h-[40rem] my-12 w-[80vw] mx-auto'>
-      <h1 className='text-4xl font-bold flex justify-center my-12'>
+    <div className=' my-16 w-[80vw] mx-auto'>
+      <h1 className='text-4xl font-bold flex justify-center my-12 '>
         What we offer ?
       </h1>
       {/* Parent Div */}
-      <div className='flex items-center justify-around'>
+      <div className='flex items-center justify-around flex-wrap gap-8'>
         {Items?.map((item, i) => (
           <div
             style={{ backgroundImage: `url(${item.image})` }}

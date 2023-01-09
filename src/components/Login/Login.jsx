@@ -1,16 +1,22 @@
-import React, { useEffect, useState } from "react";
-import { json } from "react-router-dom";
+import React, { useState } from "react";
+import { json, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [user, setUser] = useState();
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
-    const user = { username, password };
     e.preventDefault();
     localStorage.setItem("username", JSON.stringify(username));
     localStorage.setItem("password", JSON.stringify(password));
     alert("Data is stored in Local Storage");
+
+    const userItem = JSON.parse(localStorage.getItem("username"));
+    if (userItem) {
+      setUsername(userItem);
+      navigate("/signup");
+    }
   };
 
   return (
@@ -25,7 +31,7 @@ const Login = () => {
         </div>
         <div className='card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100'>
           <div className='card-body'>
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className='form-control'>
                 <label className='label'>
                   <span className='label-text'>User Id</span>
@@ -43,9 +49,10 @@ const Login = () => {
                   <span className='label-text'>Password</span>
                 </label>
                 <input
-                  type='text'
+                  type='password'
                   placeholder='password'
                   className='input input-bordered'
+                  required='true'
                   onChange={(e) => setPassword(e.target.value)}
                 />
                 <label className='label'>
@@ -55,10 +62,7 @@ const Login = () => {
                 </label>
               </div>
               <div className='form-control mt-6'>
-                <button
-                  onClick={handleSubmit}
-                  className='btn btn-color border-none'
-                >
+                <button type='submit' className='btn btn-color border-none'>
                   Submit Now
                 </button>
               </div>

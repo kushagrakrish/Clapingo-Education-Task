@@ -3,10 +3,10 @@ import plan1 from "../../Assets/plans1.png";
 
 const Work = () => {
   return (
-    <div className='mx-auto w-[80vw]'>
+    <div className='mx-auto my-36 w-[80vw]'>
       <h1 className='text-4xl my-7 font-bold'>How it works ?</h1>
       <div className='grid lg:grid-cols-3 gap-4 my-4'>
-        <div className='grid grid-rows-2 '>
+        <div className='grid grid-rows-2 max-[1030px]:gap-[3rem] '>
           {/* card1 */}
           <div className='card w-96 h-48 bg-base-100 shadow-xl'>
             <div className='card-body'>
@@ -30,7 +30,7 @@ const Work = () => {
         <div className='flex justify-center'>
           <img src={plan1} alt='' />
         </div>
-        <div className='grid grid-rows-2'>
+        <div className='grid grid-rows-2 max-[1030px]:gap-[3rem] '>
           {/* card1 */}
           <div className='card w-96 h-48 bg-base-100 shadow-xl'>
             <div className='card-body'>
