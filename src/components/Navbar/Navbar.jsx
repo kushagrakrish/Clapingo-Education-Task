@@ -35,8 +35,8 @@ const Navbar = () => {
               className='menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52'
             >
               {Items?.map((item, i) => (
-                <li>
-                  <a className='font-medium'>{item}</a>
+                <li className='font-normal cursor-pointer hover:text-teal-600 '>
+                  {item}
                 </li>
               ))}
             </ul>
@@ -48,8 +48,8 @@ const Navbar = () => {
         <div className='navbar-center hidden lg:flex'>
           <ul className='menu menu-horizontal p-0'>
             {Items?.map((item, i) => (
-              <li>
-                <a className='font-semibold text-lg'>{item}</a>
+              <li className='font-semibold text-lg px-10 cursor-pointer hover:text-teal-600 '>
+                {item}
               </li>
             ))}
           </ul>
