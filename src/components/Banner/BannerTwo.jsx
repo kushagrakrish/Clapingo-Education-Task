@@ -5,7 +5,7 @@ const BannerTwo = () => {
     <div>
       <div className='flex mx-auto max-[1050px]:my-[10rem]'>
         <div className='2xl:flex items-center justify-start gap-[18rem] max-[1050px]:flex-col max-[1050px]:items-start'>
-          <img src={Group8519} className='max-[1050px]:mb-[3rem]' />
+          <img src={Group8519} className='max-[1050px]:mb-[3rem]' alt='group' />
 
           <div className='lg:ml-48 max-[1050px]:text-center'>
             <p className='text-sm text-emerald-600 font-bold'>Book a trail</p>

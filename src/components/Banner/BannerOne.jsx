@@ -7,7 +7,7 @@ const BannerOne = () => {
       <div className='lg:mt-[-50px]'>
         <div className='hero h-[35rem]'>
           <div className='hero-content flex-col lg:flex-row-reverse'>
-            <img src={frame1} className='lg:max-w-sm' />
+            <img src={frame1} className='lg:max-w-sm' alt='frame1' />
             <div className='lg:mr-56'>
               <h1 className='text-5xl font-bold'>
                 Hone Your english <br /> speaking skills over
